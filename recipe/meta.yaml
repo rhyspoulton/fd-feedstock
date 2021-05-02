@@ -10,6 +10,8 @@ source:
    sha256: dd255edc891b9addc2e90e2bb536d02ecd716a9236891a674162e15c47c8e088
 
 build:
+  run_exports:
+    - {{ pin_subpackage("fd", max_pin="x") }}
   error_overdepending: true
   error_overlinking: true
   number: 0

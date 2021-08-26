@@ -1,5 +1,5 @@
 {% set name = "fd" %}
-{% set version = "8.38.0" %}
+{% set version = "8.40.2" %}
 
 package:
    name: "{{ name }}"
@@ -7,7 +7,7 @@ package:
 
 source:
    url: http://software.igwn.org/lscsoft/source/{{ name }}-{{ version }}.tar.gz
-   sha256: dd255edc891b9addc2e90e2bb536d02ecd716a9236891a674162e15c47c8e088
+   sha256: 91bf036a2663a573a706315ab20b547d024160c90feb576c84966d3ebc78ccab
 
 build:
   error_overdepending: true

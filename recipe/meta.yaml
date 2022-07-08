@@ -1,5 +1,5 @@
 {% set name = "fd" %}
-{% set version = "8.40.2" %}
+{% set version = "8.43.7" %}
 
 package:
    name: "{{ name }}"
@@ -7,14 +7,14 @@ package:
 
 source:
    url: http://software.igwn.org/lscsoft/source/{{ name }}-{{ version }}.tar.gz
-   sha256: 91bf036a2663a573a706315ab20b547d024160c90feb576c84966d3ebc78ccab
+   sha256: 53326be8e16aa64d87d48da9016567e24104d027477cc098caa22e5e060ab925
 
 build:
   run_exports:
     - {{ pin_subpackage("fd", max_pin="x") }}
   error_overdepending: true
   error_overlinking: true
-  number: 1
+  number: 0
   skip: true  # [win or osx]
 
 requirements:
@@ -25,10 +25,10 @@ requirements:
     - make  # [unix]
     - pkg-config  # [unix]
   host:
-    - cfg >=9.0.0
-    - cm >=9.0.1
-    - frv >=4.35.4
-    - libframel >=8.41.1
+    - cfg >=10.5.2
+    - cm >=10.3.4
+    - frv >=4.36
+    - libframel >=8.42.1
 
 test:
   requires:
